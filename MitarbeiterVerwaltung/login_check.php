@@ -22,7 +22,7 @@ if (isset($_POST['mail']) && isset($_POST['pass'])) {
         $_SESSION['user_id'] = $user['id']; // Wir merken uns die ID
         $_SESSION['rolle'] = $user['rolle'];
 
-        header("Location: dashboard.php");
+        header("Location: admin.php");
         exit;
     } else {
         // LOGIN FEHLGESCHLAGEN

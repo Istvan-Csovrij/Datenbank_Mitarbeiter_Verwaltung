@@ -20,7 +20,7 @@ $array_schluessel = [];
             <div class="aContainer">
                 <a class="ahrefs" href="start.php">Start</a>
                 <a class="ahrefs" href="login.php">Login</a>
-                <a class="ahrefs" href="">Registrieren</a>
+                <a class="ahrefs" href="regist.php">Registrieren</a>
                 <a class="ahrefs" href="admin.php">Admin</a>
             </div>
         </nav>

@@ -21,7 +21,7 @@
     </nav>
     <br><br>
 
-    <form action="registtresor.php" method="POST">
+    <form action="registTresor.php" method="POST">
 
         <label for="mail">E-Mail</label><br>
         <input type="email" name="mail" placeholder="mmaxmuster@gmail.com" required><br><br>

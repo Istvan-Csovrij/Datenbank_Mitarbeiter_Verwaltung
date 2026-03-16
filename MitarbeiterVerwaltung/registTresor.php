@@ -1,9 +1,7 @@
 <?php
 require_once __DIR__ . "db_conection.php";
 
-$email = 'administvan@gmail.com';
-$password_klartext = 'infoAdmin';
-$rolle = 'admin';
+
 
 // 3. DAS PASSWORT VERSCHLÜSSELN (Hashen)
 // Dieser Befehl macht aus "geheim123" etwas wie "$2y$10$asdf..."
