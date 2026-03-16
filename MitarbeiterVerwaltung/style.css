@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navclass {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 115, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hezlichh {
+    box-shadow: 0px 4px 3px 1px gray;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+
+.navclassStart {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 115, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ahrefs {
+    text-decoration: none;
+    padding: 2px;
+    color: black;
+}
+
+.ahrefs:hover {
+    box-shadow: 0px 0px 4px 3px rgb(48, 48, 48);
+    border-radius: 2px;
+}
+
+.ahrefs:active {
+    transform: scale(1.2);
+}
+
+.aContainer {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 12px;
+}
+
+.aContainerStart {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 12px;
+}
+
+.formClassForm {
+    padding: 12px;
+}
+
+.formularUnderline {
+    margin-left: 8px;
+}
+
+.formPrivider {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formtoo {
+    padding: 12px;
+}
+
+.datenbankImg {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+}
+
+.ahrefsRegSeite {
+    display: inline-block;
+    /* Das ist der wichtigste Teil! */
+    background-color: greenyellow;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: black;
+}
+
+.ahrefsRegSeite:hover {
+    box-shadow: 0px 0px 4px 3px rgb(184, 183, 183);
+    border-radius: 2px;
+}
+
+.ahrefsRegSeite:active {
+    transform: scale(0.9);
+    /* Kleiner Tipp: Scale 0.9 (etwas kleiner) wirkt oft natürlicher beim Klicken als größer */
+}
+
+.infoText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.askBut {
+    margin-left: 8px;
+}

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    height: 40px;
+    background-color: rgb(255, 115, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 10px;
+    padding: 2px;
+}
+
+.back:hover {
+    background-color: rgb(251, 194, 4);
+    box-shadow: 0 0px 4px 3px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.back:active {
+    transform: scale(1.1);
+}
+
+.adminunderline {
+    padding: 4px;
+}
+
+.cardBank {
+    height: 16px;
+    width: 100px;
+    background-color: bisque;
+    padding: 12px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.tableClass {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+
+}
+
+.admin-table {
+    border-collapse: collapse;
+    /* Dies verschmilzt die Linien! */
+    width: 100%;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid gray;
+    padding: 4px;
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(209, 208, 208);
+}
+
+.btn-delete {
+    background-color: rgb(210, 208, 208);
+    border: none;
+    border-radius: 2px;
+}
+
+.btn-delete:hover {
+    background-color: rgb(246, 72, 72);
+    box-shadow: 0px 0px 4px 3px;
+}

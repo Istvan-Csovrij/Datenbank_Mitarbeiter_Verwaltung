@@ -1,0 +1,323 @@
+body {
+    background-color: #DBEEFF;
+    margin: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+.navMenu {
+    height: 60px;
+    background-color: #F5F7FB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 18px 50px rgba(15, 23, 42, .10);
+}
+
+.hrefsClass {
+    text-decoration: none;
+    color: black;
+}
+
+.hrefsClass:hover {
+    background-color: rgb(221, 220, 220);
+    box-shadow: 0px 0px 4px 6px rgb(221, 220, 220);
+}
+
+.hrefsClass:active {
+    transform: scale(1.2);
+}
+
+.aContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.iconshref {
+    display: flex;
+    align-items: end;
+    margin: 12px;
+}
+
+.img {
+    margin-right: 4px;
+}
+
+footer {
+    height: 50px;
+    background-color: gray;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+}
+
+.form {
+    width: 400px;
+    height: 400px;
+    background-color: #EFF8FF;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.formFeilds {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 85%;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 8px;
+    height: 30px;
+}
+
+.butonNav {
+    margin-left: 8px;
+    width: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #4AA3FF;
+    border-radius: 16px;
+    height: 40px;
+    border: none;
+    margin-top: 20px;
+}
+
+.butonNavRegist {
+    width: 80px;
+    background-color: #4AA3FF;
+    border-radius: 6px;
+    height: 40px;
+    border: none;
+    text-decoration: none;
+}
+
+.buttoncontainerRegist {
+    display: flex;
+    justify-content: flex-end;
+    /* Rechts ausrichten */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.butonNavRegist:hover {
+    box-shadow: 0px 0px 2px 4px#99c9f8;
+}
+
+.butonNavRegist:active {
+    transform: scale(1.1);
+}
+
+.buttoncontainer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.labelInputContainer {
+    margin-top: 100px
+}
+
+.mainProfil {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilContainer {
+    width: 450px;
+    height: 300px;
+    background-color: #EFF8FF;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.namen {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.labelInputs {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    height: 30px;
+}
+
+.area {
+    width: 95%;
+    height: 60px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.labelAreaContainer {
+    margin-left: 20px;
+}
+
+.speichernButton {
+    width: 80px;
+    background-color: #4AA3FF;
+    border-radius: 16px;
+    height: 40px;
+    border: none;
+    margin-right: 8px;
+}
+
+.speichernButton:hover {
+    box-shadow: 0px 0px 2px 4px#99c9f8;
+}
+
+.speichernButton:active {
+    transform: scale(1.1);
+}
+
+.vrname {
+    border: none;
+    margin-bottom: 8px;
+}
+
+.nrname {
+    border: none;
+    margin-bottom: 8px;
+}
+
+.card-white {
+    background: white;
+    border-radius: 14px;
+    width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.angabefelder {
+    display: flex;
+    width: 100%;
+}
+
+.übernehmenButton {
+    width: 80px;
+    background-color: #4AA3FF;
+    border-radius: 12px;
+    height: 40px;
+    border: none;
+    margin-right: 8px;
+}
+
+.übernehmenButton:hover {
+    box-shadow: 0px 0px 2px 4px#99c9f8;
+}
+
+.übernehmenButton:active {
+    transform: scale(1.1);
+}
+
+.zurückButton {
+    width: 80px;
+    background-color: #4AA3FF;
+    border-radius: 12px;
+    height: 40px;
+    border: none;
+    margin-right: 8px;
+}
+
+.zurückButton:hover {
+    box-shadow: 0px 0px 2px 4px#99c9f8;
+}
+
+.zurückButton:active {
+    transform: scale(1.1);
+}
+
+.inputs {
+    width: 250px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+}
+
+.lab {
+    border: none;
+}
+
+.buttonsContainer {
+    height: 50px;
+}
+
+.content-container {
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Das Raster (Grid) für die Produkte */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Zeilenumbruch, wenn kein Platz mehr ist */
+    gap: 25px;
+    /* Abstand zwischen den Karten */
+}
+
+/* Die einzelne Produkt-Karte */
+.product-card {
+    background: white;
+    border: 1px solid #E6EDF6;
+    /* Deine Border-Farbe */
+    border-radius: 16px;
+    /* Laut Vorlage */
+    width: 280px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, .10);
+    /* Dein Schatten von vorhin! */
+}
+
+.product-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2E90FF;
+    /* Dein Primary Blau */
+    margin: 10px 0;
+}
+
+.shopLogoClass {
+    width: 150px;
+    height: 150px;
+}

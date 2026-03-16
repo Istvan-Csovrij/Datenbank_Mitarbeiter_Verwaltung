@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.5px);
+            font-family: sans-serif;
+        }
+
+        .header-container {
+            height: 250px;
+            background-color: grey;
+            background-image: url(background.jpg);
+            background-size: cover;
+        }
+
+        .card {
+            height: calc(100vh - 218px);
+            background-color: white;
+            border-radius: 8px;
+            margin-top: -32px;
+            margin-left: 16px;
+            margin-right: 16px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            height: 48px;
+            margin-bottom: 32px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        button {
+            height: 48px;
+            background-color: green;
+            color: white;
+            border: unset;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6dda76;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header-container"></div>
+
+    <?php
+    $specialChars = [' ', '&', '/', '§'];
+
+    ?>
+
+
+    <div class="card">
+        <form action="">
+            <h2>Text verschlüsseln</h2>
+            <input name="encrypt" placeholder="Text eingeben">
+
+            <?php
+            if (isset($_GET['encrypt'])) {
+
+                $text = strtolower($_GET['encrypt']);
+                $array = str_split($text);
+                echo '<b> Dein Wort lautet: </b>';
+                foreach ($array as $char) {
+                    if (in_array($char, $specialChars)) {
+                        echo $char;
+                    } else {
+                        echo toChar(toNum($char) + 1);
+                    }
+                }
+            }
+            ?>
+            <button typ="submit">Verschlüsseln</button>
+        </form>
+
+        <form action="">
+            <h2>Text entschlüsseln</h2>
+            <input name="decrypt" placeholder="Text eingeben">
+
+            <?php
+
+
+            if (isset($_GET['decrypt'])) {
+                echo '<b> Dein entschlüsselten Wort lautet: </b>';
+
+                $text = strtolower($_GET['decrypt']);
+                $array = str_split($text);
+                foreach ($array as $char) {
+                    if (in_array($char, $specialChars)) {
+                        echo $char;
+                    } else {
+                        echo toChar(toNum($char) - 1);
+                    }
+                }
+            }
+
+            ?>
+
+            <button typ="submit">Entschlüsseln</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
+
+<?php
+function toNum($data)
+{
+    $alphabet = array(
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'f',
+        'g',
+        'h',
+        'i',
+        'j',
+        'k',
+        'l',
+        'm',
+        'n',
+        'o',
+        'p',
+        'q',
+        'r',
+        's',
+        't',
+        'u',
+        'v',
+        'w',
+        'x',
+        'y',
+        'z'
+    );
+    $alpha_flip = array_flip($alphabet);
+    $return_value = -1;
+    $length = strlen($data);
+    for ($i = 0; $i < $length; $i++) {
+        $return_value +=
+            ($alpha_flip[$data[$i]] + 1) * pow(26, ($length - $i - 1));
+    }
+    return $return_value;
+}
+function toChar($number)
+{
+
+    if ($number < 0) {
+        $number = $number + 26;
+    }
+    if ($number > 25) {
+        $number = $number - 25;
+    }
+    $alphabet = array(
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'f',
+        'g',
+        'h',
+        'i',
+        'j',
+        'k',
+        'l',
+        'm',
+        'n',
+        'o',
+        'p',
+        'q',
+        'r',
+        's',
+        't',
+        'u',
+        'v',
+        'w',
+        'x',
+        'y',
+        'z'
+    );
+    return $alphabet[$number];
+}
+
+
+
+
+
+
+
+
+
+?>

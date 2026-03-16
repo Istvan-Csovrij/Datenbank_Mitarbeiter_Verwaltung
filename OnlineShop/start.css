@@ -1,0 +1,23 @@
+.aContainerStart {
+    display: flex;
+    justify-content: end;
+    width: 0px;
+}
+
+.hrefsClassStart {
+    margin-right: 8px;
+}
+
+.navMenuStart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconshrefStart {
+    margin-right: 8px;
+}
+
+.butonNav {
+    margin-left: 8px;
+    width: 80px;
+}
