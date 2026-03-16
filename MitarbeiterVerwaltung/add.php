@@ -1,4 +1,5 @@
 <?php
+session_start();
 $array_schluessel = [];
 
 ?>
@@ -11,6 +12,7 @@ $array_schluessel = [];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mitarbeiter Datenbank</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleDatenbank.css">
 </head>
 
 <body>
@@ -18,15 +20,14 @@ $array_schluessel = [];
         <nav class="navclass">
             <h2 class="formularUnderline">Registrieren</h2>
             <div class="aContainer">
-                <a class="ahrefs" href="start.php">Start</a>
-                <a class="ahrefs" href="login.php">Login</a>
-                <a class="ahrefs" href="regist.php">Registrieren</a>
-                <a class="ahrefs" href="admin.php">Admin</a>
+                <a class="back" href="start.php">Start</a>
+                <a class="back" href="admin.php">Tabelle</a>
+                <a class="back" href="logout.php">Logout</a>
             </div>
         </nav>
     </header>
 
-    <mai>
+    <main>
         <div class="formPrivider">
             <div>
                 <form class="formClassForm" action="save_employe/saveEmploye.php" method="POST">
@@ -60,7 +61,7 @@ $array_schluessel = [];
                 </datalist><br><br>
 
                 <label>Geburtsort:</label><br>
-                <input type="text" name="wohnort" list="geburtsortVorschlag" placeholder="z.B. Musterstraße 1"
+                <input type="text" name="geburtsort" list="geburtsortVorschlag" placeholder="z.B. Musterstraße 1"
                     autocomplete="off" required>
                 <datalist id="geburtsortVorschlag">
                     <option value="Heidelberg">Heidelberg</option>
@@ -76,12 +77,15 @@ $array_schluessel = [];
                     <option value="HR">Personalwesen</option>
                     <option value="Marketing">Marketing</option>
                 </datalist><br><br><br>
-
-                <button type="submit">Mitarbeiter in DB speichern</button>
+                <?php if ($_SESSION['rolle'] == 'admin'): ?>
+                    <button type="submit">Mitarbeiter in DB speichern</button>
+                <?php else: ?>
+                    <span class="adminrechteClass">Nur Adminrechte</span>
+                <?php endif; ?>
                 </form>
             </div>
         </div>
-        </main>
+    </main>
 
 </body>
 

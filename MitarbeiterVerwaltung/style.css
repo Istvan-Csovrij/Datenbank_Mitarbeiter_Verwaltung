@@ -45,10 +45,10 @@ body {
 }
 
 .aContainer {
-    width: 300px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
-    margin-right: 12px;
+    margin-right: 50px;
 }
 
 .aContainerStart {

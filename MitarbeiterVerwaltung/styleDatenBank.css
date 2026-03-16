@@ -20,8 +20,12 @@ nav {
     padding: 2px;
 }
 
+.backadd {
+    background-color: rgb(255, 115, 0);
+}
+
 .back:hover {
-    background-color: rgb(251, 194, 4);
+    background-color: rgb(255, 115, 0);
     box-shadow: 0 0px 4px 3px;
     display: flex;
     align-items: center;

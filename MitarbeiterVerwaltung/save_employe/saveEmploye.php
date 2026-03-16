@@ -1,5 +1,10 @@
 <?php
+session_start();
 require_once __DIR__ . '/../db_conection.php';
+
+if (!isset($_SESSION['rolle']) || $_SESSION['rolle'] !== 'admin') {
+    die("Stopp! Nur Admins dürfen hier Mitarbeiter hinzufügen.");
+}
 
 try {
     // 1. Daten sicher abrufen
@@ -37,7 +42,7 @@ try {
     ]);
 
     echo "<h2>Geschafft!</h2><p>Mitarbeiter $vorname wurde erfolgreich in der Datenbank verewigt.</p>";
-    echo '<a href="../formular.php">Weiteren Mitarbeiter hinzufügen</a>';
+    echo '<a href="../add.php">Weiteren Mitarbeiter hinzufügen</a>';
 
 } catch (PDOException $e) {
     // Falls noch was hakt, zeigt uns das genau wo

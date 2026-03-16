@@ -37,7 +37,8 @@ $row = $result->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <nav>
         <h2 class="adminunderline">Admin Seite</h2>
-        <a class="back" href="logout.php" style="background-color: #f44336;">Logout</a>
+        <a class="backtadd" href="add.php">ADD</a>
+        <a class="backadd" href="logout.php">Logout</a>
     </nav>
 
     <?php if (isset($_GET['success'])): ?>
