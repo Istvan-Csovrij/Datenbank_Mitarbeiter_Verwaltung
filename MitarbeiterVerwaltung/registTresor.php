@@ -1,23 +1,24 @@
 <?php
 require_once __DIR__ . "db_conection.php";
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $mailRegist = $_POST['mailRegist'];
+    $password_klartextRegist = $_POST['passRegist'];
+    $rolle = 'user';
+
+    $gehastesPasswortRegister = password_hash($password_klartextRegist, PASSWORD_DEFAULT);
+    try {
+        $sql = "INSERT INTO users(email, passwort, rolle) VALUEs (?, ?, ? )";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$mailRegist, $gehastesPasswortRegister, $rolle]);
+
+        echo 'Erfolg! Der eine neue Account wurde erstellt.
+        <a href="login.php>Login</';
 
 
-// 3. DAS PASSWORT VERSCHLÜSSELN (Hashen)
-// Dieser Befehl macht aus "geheim123" etwas wie "$2y$10$asdf..."
-$gehastesPasswort = password_hash($password_klartext, PASSWORD_DEFAULT);
-
-try {
-    // 4. In die neue Tabelle speichern
-    $sql = "INSERT INTO users (email, passwort, rolle) VALUES (?, ?, ?)";
-    $stmt = $pdo->prepare($sql);
-    // Hier die Kommas beachten:
-    $stmt->execute([$email, $gehastesPasswort, $rolle]);
-
-    echo "Erfolg! Der Admin-Account wurde erstellt.";
-
-} catch (PDOException $e) {
-    echo "Fehler beim erstellen: " . $e->getMessage();
+    } catch (PDOException $e) {
+        echo "Fehler beim erstellen: " . $e->getMessage();
+    }
 }
 
 ?>

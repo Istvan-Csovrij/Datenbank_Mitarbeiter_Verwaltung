@@ -19,19 +19,20 @@ if (isset($_POST['mail']) && isset($_POST['pass'])) {
 
     // Wir prüfen: Gibt es den User UND ist das Passwort korrekt?
     if ($user && password_verify($pass_eingabe, $user['passwort'])) {
+        // Nachdem das Passwort mit password_verify bestätigt wurde:
         $_SESSION['user_id'] = $user['id']; // Wir merken uns die ID
-        $_SESSION['rolle'] = $user['rolle'];
+        $_SESSION['rolle'] = $user['rolle'];// <--- Hier wird der Schlüssel für die aktuelle Sitzung kopiert
 
-        header("Location: admin.php");
+        header("Location: ./admin.php");
         exit;
     } else {
         // LOGIN FEHLGESCHLAGEN
-        echo "E-Mail oder Passwort falsch!";
+        echo 'E-Mail oder Passwort falsch!';
         echo '<br><a href="login.php">Zurück zum Login</a>';
     }
 } else {
     // Falls jemand die Datei direkt aufruft ohne Formular
-    header("Location: login.php");
+    header("Location: ./admin.php");
     exit;
 }
 ?>

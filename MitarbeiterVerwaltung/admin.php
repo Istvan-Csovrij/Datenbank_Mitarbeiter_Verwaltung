@@ -7,11 +7,6 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-if ($_SESSION['rolle'] !== 'admin') {
-    header("Location: dashboard.php?error=kein_admin");
-    exit;
-}
-
 require_once __DIR__ . '/db_conection.php';
 
 // 2. LÖSCH-LOGIK (Muss vor der Abfrage der Tabelle passieren)
@@ -42,7 +37,6 @@ $row = $result->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <nav>
         <h2 class="adminunderline">Admin Seite</h2>
-        <a class="back" href="dashboard.php">Zurück zum Dashboard</a>
         <a class="back" href="logout.php" style="background-color: #f44336;">Logout</a>
     </nav>
 
@@ -70,10 +64,14 @@ $row = $result->fetchAll(PDO::FETCH_ASSOC);
                 <td><?php echo htmlspecialchars($m['abteilung']); ?></td>
                 <td><?php echo htmlspecialchars($m['wohnort']); ?></td>
                 <td>
+                    <?php if ($_SESSION['rolle'] === 'admin'): ?>
                     <form action='admin.php' method='POST' onsubmit="return confirm('Wirklich löschen?')">
                         <input type='hidden' name='delet_id' value='<?php echo $m['id']; ?>'>
                         <button type='submit' class='btn-delete'>Löschen</button>
                     </form>
+                    <?php else: ?>
+                    <span class="adminrechteClass">Nur Adminrechte</span>
+                    <?php endif; ?>
                 </td>
             </tr>
             <?php endforeach; ?>
