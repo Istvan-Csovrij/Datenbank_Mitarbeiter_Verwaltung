@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // Nein? Dann ab zur Login-Seite
+    header("Location: login.php");
+    exit;
+}
+// SCHRITT B: Hat er die richtige Rolle?
+if ($_SESSION['rolle'] !== 'admin') {
+    // Nein? Dann zurück zum Dashboard mit einer Nachricht
+    header("Location: dashboard.php?error=kein_admin");
+    exit;
+}
+
+require_once __DIR__ . '/db_conection.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,15 +28,15 @@
 
 <body>
 
-    <head>
-        <nav>
-            <h2 class="adminunderline">Admin Seite</h2>
-            <a class="back" href="formular.php">Zurück</a>
-        </nav>
-    </head>
+
+    <nav>
+        <h2 class="adminunderline">Admin Seite</h2>
+        <a class="back" href="formular.php">Zurück</a>
+    </nav>
+
 
     <?php
-    require_once __DIR__ . '/db_conection.php';
+
 
     // 1. Prüfen: Wurde das Formular mit 'delet_id' abgeschickt?
     if (isset($_POST['delet_id'])) {
@@ -37,10 +55,7 @@
 
     $result = $pdo->query("SELECT * FROM mitarbeiter");
     $row = $result->fetchAll(PDO::FETCH_ASSOC);
-    ?>
 
-
-    <?php
     // Zeige die Meldung ganz oben an, damit man sie sofort sieht
     if (isset($_GET['success'])) {
         echo "<p style='background-color: #d4edda; color: #155724; padding: 10px; border-radius: 5px;'>
