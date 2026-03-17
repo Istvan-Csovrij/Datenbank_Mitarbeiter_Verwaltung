@@ -24,10 +24,10 @@
     <form action="registTresor.php" method="POST">
 
         <label for="mail">E-Mail</label><br>
-        <input type="email" name="mailRegist" placeholder="mmaxmuster@gmail.com" required><br><br>
+        <input type="email" name="mailRegist" placeholder="mmaxmuster@gmail.com" autocomplete="off" required><br><br>
 
         <label for="pass">Password</label><br>
-        <input type="text" name="passRegist" placeholder="12345678 @" required><br><br>
+        <input type="text" name="passRegist" placeholder="12345678 @" autocomplete="off" required><br><br>
 
         <button type="submit">Absenden</button>
     </form>

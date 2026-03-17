@@ -4,6 +4,7 @@ body {
 }
 
 nav {
+    width: 100%;
     height: 40px;
     background-color: rgb(255, 115, 0);
     display: flex;
@@ -22,9 +23,23 @@ nav {
 
 .backadd {
     background-color: rgb(255, 115, 0);
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 10px;
+    padding: 2px;
 }
 
 .back:hover {
+    background-color: rgb(255, 115, 0);
+    box-shadow: 0 0px 4px 3px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.backadd:hover {
     background-color: rgb(255, 115, 0);
     box-shadow: 0 0px 4px 3px;
     display: flex;
@@ -81,9 +96,24 @@ thead {
     border-radius: 2px;
 }
 
+.btn-edit {
+    background-color: rgb(210, 208, 208);
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+.btn-edit:hover {
+    background-color: rgb(246, 72, 72);
+    box-shadow: 0px 0px 4px 3px;
+    text-decoration: none;
+}
+
 .btn-delete:hover {
     background-color: rgb(246, 72, 72);
     box-shadow: 0px 0px 4px 3px;
+    text-decoration: none;
 }
 
 .adminrechteClass {
