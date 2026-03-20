@@ -47,13 +47,6 @@ $row = $result->fetchAll(PDO::FETCH_ASSOC);
             <a class="backadd" href="logout.php">Logout</a>
         </div>
     </nav>
-
-    <?php if (isset($_GET['success'])): ?>
-    <p style='background-color: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin: 10px;'>
-        ✅ Mitarbeiter wurde erfolgreich gelöscht!
-    </p>
-    <?php endif; ?>
-
     <table class="admin-table">
         <thead>
             <tr>
@@ -103,6 +96,7 @@ $row = $result->fetchAll(PDO::FETCH_ASSOC);
         </tbody>
     </table>
     <br><br>
+
 
 </body>
 

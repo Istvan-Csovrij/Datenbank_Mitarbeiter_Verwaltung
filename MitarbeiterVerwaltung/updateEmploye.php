@@ -19,7 +19,6 @@ if ($id) {
     $stmt = $pdo->prepare("UPDATE mitarbeiter SET vorname = ?, nachname = ?, abteilung = ?, geburtsdatum = ?, strasse = ?, hnummer = ?, wohnort = ?, geburtsort = ? WHERE id = ?");
     $stmt->execute([$vorname, $nachname, $abteilung, $geburtsdatum, $strasse, $hnummer, $wohnort, $geburtsort, $id]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
 } else {
     die("Keine Id übergeben wurde");
 }

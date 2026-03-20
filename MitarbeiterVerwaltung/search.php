@@ -51,7 +51,7 @@ if (!empty($suchbegrief)) {
         <a href="edit.php?id=<?php echo $mitarbeiter['id']; ?>" class='btn-edit'>Bearbeiten</a>
         <hr>
         <?php } else { ?>
-        <span class='adminrechteClass'>Nur Adminrechte</span>;
+        <span class='adminrechteClass'>Bearbeiten und löschen nur mit Adminrechte</span>
         <?php }
                 }
             } else {

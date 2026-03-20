@@ -31,9 +31,24 @@ if (isset($_SESSION['rolle']) && $_SESSION['rolle'] === 'admin') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleDatenBank.css">
 </head>
 
 <body>
+
+    <nav class="navclassStart">
+        <div>
+            <img class="datenbankImg" src="img/datenbank.png" alt="">
+        </div>
+        <div class="aContainerStart">
+            <a class="ahrefs" href="start.php">Start</a>
+            <a class="ahrefs" href="logout.php">Logout</a>
+            <a class="ahrefs" href="admmin.php">Table</a>
+        </div>
+    </nav>
+
+
     <form action="updateEmploye.php" method="post">
         <input type="hidden" name="id" required value="<?php echo $row['id']; ?>">
 
